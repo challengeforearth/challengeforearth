@@ -1,0 +1,130 @@
+body,
+html {
+  width: 100vw;
+  height: 100%;
+  display: block;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.challenge-details {
+  position: relative;
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+}
+
+.challenge-details > img {
+  display: inline;
+  /* Set rules to fill background */
+  min-width: 1600px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.challenge-details > .challenge-text {
+  position: absolute;
+  left: 16px;
+  top: 15px;
+}
+
+.challenge-text > .challenge-title {
+  width: 223px;
+  height: 85px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FFFFFF;
+}
+
+.challenge-text > .challenge-category {
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.challenge-text > .challenge-description {
+  width: 90%;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.challenge-text > .challenge-help {
+  width: 90%;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.bigbox-boutton {
+  display: flex;
+  width: 90%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.container-boutton {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+
+.container-boutton > button {
+  justify-content: center;
+}
+
+.container-boutton > .text-boutton {
+  position: relative;
+  top: 25px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.challenge-accepted {
+  position: relative;
+  left: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-color: #28A745;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.challenge-accepted i {
+  color: #28A745;
+}
+
+.challenge-later {
+  position: relative;
+  left: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: #dc3545;
+  opacity: 0.5;
+}
+
+.challenge-later i {
+  color: #dc3545;
+}
+
+.slider {
+  position: absolute;
+  top: 400px;
+  right: -30px;
+  background-color: #28A745;
+}
+

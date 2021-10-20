@@ -1,0 +1,479 @@
+body {
+  background-color: var(--colorLayoutDarkest) !important;
+}
+
+.navbar {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.challenge-list {
+  position: relative;
+  top: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+.challenge {
+  display: flex;
+  width: 90%;
+  max-height: 200px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  background: black;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px 1px #6c757d;
+}
+
+.challenge-tiletextt {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.challenge-tiletextb {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100%;
+  display: block;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.challenge-details {
+  position: relative;
+  height: 100%;
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+}
+
+.challenge-details > img {
+  display: inline;
+  /* Set rules to fill background */
+  min-width: 1600px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.challenge-details > .challenge-text {
+  position: absolute;
+  left: 16px;
+  top: 15px;
+}
+
+.challenge-intro {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+
+.xpcomponent {
+  color: white;
+  width: 30%;
+}
+
+.component1 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.circle-white {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  display: flex;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.circle-white > p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+}
+
+.xpcomponent > .experience {
+  color: #28A745;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  top: -20px;
+  left: 55px;
+}
+
+.challenge-title {
+  position: relative;
+  width: 60%;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  color: #FFFFFF;
+}
+
+.challenge-text > .challenge-category {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+.challenge-text > .challenge-description {
+  width: 90%;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.challenge-text > .challenge-help {
+  width: 90%;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.bigbox-boutton {
+  display: flex;
+  width: 90%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.container-boutton {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+
+.container-boutton > button {
+  justify-content: center;
+}
+
+.container-boutton > .text-boutton {
+  position: relative;
+  top: 25px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.challenge-accepted {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-color: #28A745;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.challenge-accepted i {
+  color: #28A745;
+}
+
+.challenge-later {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 35px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border-color: #dc3545;
+  opacity: 0.5;
+}
+
+.challenge-later i {
+  color: #dc3545;
+}
+
+.slider {
+  position: absolute;
+  bottom: 50px;
+  right: -250px;
+  background-color: #28A745;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+slider > tr,
+td {
+  padding: 1px;
+  padding-right: 5px;
+}
+
+.filter {
+  display: flex;
+  width: 300px;
+  height: calc(100vh - 80px);
+  background-color: var(--colorLayoutDark);
+}
+
+@media (max-width: 768px) {
+  .filter {
+    top: 80px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+  }
+}
+
+.filter .filter-items {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .filter .filter-items {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.filter .filter-items .filter-item {
+  display: flex;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.filter .filter-items .filter-item .filter-link {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.filter .filter-items .filter-item .filter-link:hover {
+  filter: brightness(0.75);
+  background-color: var(--colorLayoutDarker);
+}
+
+[theme] {
+  --colorLayoutDarkest: rgb(255, 255, 255);
+  --colorLayoutDarker: rgb(245, 245, 245);
+  --colorLayoutDark: rgb(240, 240, 240);
+  --colorLayoutLight: rgb(225, 225, 225);
+  --colorLayoutLighter: rgb(219, 219, 219);
+  --colorLayoutLightest: rgb(210, 210, 210);
+  --colorTextDarker: rgb(150, 150, 150);
+  --colorTextDark: rgb(135, 135, 135);
+  --colorTextLight: rgb(105, 105, 105);
+  --colorTextLighter: rgb(55, 55, 55);
+  --colorTextLightest: rgb(0, 0, 0);
+  --colorAccentLight: rgb(134, 204, 163);
+  --colorAccentDark: rgb(0, 0, 0);
+}
+
+[theme=dark] {
+  --colorLayoutDarkest: rgb(0, 0, 0);
+  --colorLayoutDarker: rgb(10, 10, 10);
+  --colorLayoutDark: rgb(15, 15, 15);
+  --colorLayoutLight: rgb(30, 30, 30);
+  --colorLayoutLighter: rgb(36, 36, 36);
+  --colorLayoutLightest: rgb(45, 45, 45);
+  --colorTextDarker: rgb(100, 100, 100);
+  --colorTextDark: rgb(135, 135, 135);
+  --colorTextLight: rgb(150, 150, 150);
+  --colorTextLighter: rgb(200, 200, 200);
+  --colorTextLightest: rgb(255, 255, 255);
+}
+
+.journeys-list {
+  display: flex;
+  position: relative;
+  top: 10px;
+  justify-content: center;
+}
+
+.journey {
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+  height: 220px;
+  max-height: 220px;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.journey-tiletextt {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.journey-tiletextb {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100%;
+  display: block;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.journeys-challenge-list {
+  position: relative;
+}
+
+.journey-details {
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  top: 10px;
+}
+
+.journey-title {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.journey-description {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.journey-challenge {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: white;
+  width: 90%;
+  color: black;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 150px;
+}
+
+.journey-challenge-title {
+  color: black;
+  width: 90%;
+  position: relative;
+  left: 15px;
+  top: 3px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bigboxjourney-challenge-intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  margin: 0 auto;
+  padding: 0 10px 0 10px;
+}
+
+.bigboxjourney-challenge-status {
+  margin-top: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+.journey-challenge-status2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #28A745;
+}
+
+.journey-challenge-status2-sub {
+  color: #28A745;
+}
+
+.journey-challenge-status1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.journey-challenge-status1-sub {
+  color: #000000;
+  padding: 0 10px 0 10px;
+}
+
+.journey-challenge-status0 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.journey-challenge-status0-sub {
+  color: #dc3545;
+}
+
