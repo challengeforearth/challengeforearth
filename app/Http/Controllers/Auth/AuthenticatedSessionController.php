@@ -6,9 +6,41 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\UserChallenge;
+use App\Models\Metachallenge;
 
 class AuthenticatedSessionController extends Controller
 {
+    public function index()
+    {
+        $challengers = User::all()->count();
+        $challengesSuccess = UserChallenge::where('status', 2)
+                                                ->get();
+
+        $nbChallenges = count($challengesSuccess);
+        $kgeqCO2all = 0;
+        foreach($challengesSuccess as $challenge){
+            $stats = Metachallenge::where('challengeid', $challenge->challengeid)
+                                ->get();
+            foreach($stats as $stat){
+                if($stat->key === 'kgeqCO2'){
+                    $kgeqCO2all = $kgeqCO2all + $stat->value;
+                }
+            }
+        }
+
+        
+        return view('auth.home')
+        ->with('kgeqCO2all', $kgeqCO2all)
+        ->with('challengers', $challengers)
+        ->with('nbChallenges', $nbChallenges);
+    }
+
+    public function sources()
+    {
+        return view('auth.sources');
+    }
+
     /**
      * Display the login view.
      *
@@ -32,7 +64,7 @@ class AuthenticatedSessionController extends Controller
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
     
-                return redirect()->intended('/socialhub');
+                return redirect()->intended('/dashboard');
             }
         }
         

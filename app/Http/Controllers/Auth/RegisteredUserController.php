@@ -108,7 +108,7 @@ class RegisteredUserController extends Controller
                         )
                     );
                 Auth::login($user);
-                return redirect()->intended('/socialhub');
+                return redirect()->intended('/dashboard');
             }else{
                 return back()->withErrors([
                     'not_validated' => "L'email n'a pas été validé",

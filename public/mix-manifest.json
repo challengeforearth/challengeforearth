@@ -9,5 +9,6 @@
     "/css/challenge.css": "/css/challenge.css",
     "/css/challenge-details.css": "/css/challenge-details.css",
     "/js/socialhub.js": "/js/socialhub.js",
-    "/css/socialhub.css": "/css/socialhub.css"
+    "/css/socialhub.css": "/css/socialhub.css",
+    "/theme/css/template.css": "/theme/css/template.css"
 }

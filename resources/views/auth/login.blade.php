@@ -9,7 +9,7 @@
                     <div class="block block-transparent block-rounded w-100 mb-0 overflow-hidden">
                         <div class="block-content block-content-full px-lg-5 px-xl-6 py-4 py-md-5 py-lg-6 bg-white">
                             <div class="mb-2 text-center">
-                                <a class="link-fx font-w700 font-size-h1" href="index.html">
+                                <a class="link-fx font-w700 font-size-h1" href="/">
                                     <span class="text-dark">Challenge</span> <span class="text-primary">For&nbsp;Earth</span>
                                 </a>
                                 <p class="text-uppercase font-w700 font-size-sm text-muted">@lang('login.signin')</p>

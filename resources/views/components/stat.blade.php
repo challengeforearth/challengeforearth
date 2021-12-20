@@ -1,0 +1,1 @@
+@include('gamification::components.challenges.doughnuts')

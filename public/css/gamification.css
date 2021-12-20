@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -149,6 +151,236 @@ body {
 .navbar {
   width: 100%;
   margin-bottom: 90px;
+}
+
+/*! CSS Used from: https://demo.pixelcave.com/dashmix/assets/css/dashmix.min-5.1.css */
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0665d0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #03356d;
+  text-decoration: none;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+
+.ratio::before {
+  display: block;
+  padding-top: var(--bs-aspect-ratio);
+  content: "";
+}
+
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio-1x1 {
+  --bs-aspect-ratio: 100%;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-white {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+a {
+  transition: color 0.12s ease-out;
+}
+
+.text-uppercase {
+  letter-spacing: 0.0625rem;
+}
+
+.row.g-sm > [class*=col-] {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+
+.row.g-sm .block {
+  margin-bottom: 0.25rem;
+}
+
+@media print {
+  .block {
+    box-shadow: none !important;
+  }
+}
+
+.content .block {
+  margin-bottom: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .content .block {
+    margin-bottom: 1.75rem;
+  }
+}
+
+.block {
+  margin-bottom: 1.75rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(214, 221, 237, 0.5), 0 1px 2px rgba(214, 221, 237, 0.5);
+}
+
+.block-content {
+  transition: opacity 0.25s ease-out;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 1px;
+  overflow-x: visible;
+}
+
+.block-content.block-content-full {
+  padding-bottom: 1.25rem;
+}
+
+a.block {
+  display: block;
+  color: #343a40;
+  font-weight: 400;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+a.block:hover {
+  color: #343a40;
+  opacity: 0.65;
+}
+
+a.block:active {
+  opacity: 1;
+}
+
+.bg-image {
+  background-position: 0 50%;
+  background-size: cover;
+}
+
+.bg-primary-op {
+  background-color: rgba(106, 176, 76, 0.8) !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.far {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-user-circle:before {
+  content: "\F2BD";
+}
+
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+/*! CSS Used fontfaces */
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-regular-400.eot);
+  src: url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-regular-400.eot#iefix) format("embedded-opentype"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-regular-400.woff2) format("woff2"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-regular-400.woff) format("woff"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-regular-400.ttf) format("truetype"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-regular-400.svg#fontawesome) format("svg");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-solid-900.eot);
+  src: url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-solid-900.eot#iefix) format("embedded-opentype"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-solid-900.woff2) format("woff2"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-solid-900.woff) format("woff"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-solid-900.ttf) format("truetype"), url(https://demo.pixelcave.com/dashmix/assets/fonts/fontawesome/fa-solid-900.svg#fontawesome) format("svg");
 }
 
 .stat-doughnuts {

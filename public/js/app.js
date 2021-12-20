@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/fdoyen/Documents/dev/challenge-for-earth/Modules/Challenge/Resources/assets/js/app.js */"./Resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! /home/fdoyen/Documents/dev/challenge-for-earth/Modules/Challenge/Resources/assets/sass/app.scss */"./Resources/assets/sass/app.scss");
+__webpack_require__(/*! /home/fdoyen/Documents/dev/challengeforearth/Modules/Challenge/Resources/assets/js/app.js */"./Resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! /home/fdoyen/Documents/dev/challengeforearth/Modules/Challenge/Resources/assets/sass/app.scss */"./Resources/assets/sass/app.scss");
 
 
 /***/ })

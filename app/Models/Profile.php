@@ -36,5 +36,4 @@ class Profile extends Model {
      */
     protected $casts = [
     ];
-
 }

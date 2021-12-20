@@ -15,7 +15,7 @@ body {
 
 .challenge-list {
   position: relative;
-  top: 90px;
+  top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -340,13 +340,13 @@ td {
   margin: 0 auto;
   display: flex;
   width: 90%;
-  height: 220px;
-  max-height: 220px;
+  max-height: 200px;
+  overflow: hidden;
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
-  background-color: white;
+  background: black;
   position: relative;
-  border-radius: 20px;
+  border-radius: 5px;
   border: none;
   margin-bottom: 20px;
 }
@@ -359,7 +359,7 @@ td {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .journey-tiletextb {
@@ -369,7 +369,7 @@ td {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 body,
@@ -378,11 +378,26 @@ html {
   height: 100%;
   display: block;
   overflow-x: hidden;
-  margin: 0;
 }
 
 .journeys-challenge-list {
   position: relative;
+  bottom: -30px;
+}
+
+.journey-challenge {
+  display: flex;
+  width: 90%;
+  max-height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+  background: black;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 5px 1px #6c757d;
 }
 
 .journey-details {
@@ -407,73 +422,50 @@ html {
   margin-bottom: 25px;
 }
 
-.journey-challenge {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  background-color: white;
-  width: 90%;
-  color: black;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  height: 150px;
-}
-
 .journey-challenge-title {
-  color: black;
-  width: 90%;
-  position: relative;
-  left: 15px;
-  top: 3px;
+  color: white;
+  position: absolute;
+  top: 5px;
+  left: 5px;
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
+.accept-journey {
+  position: relative;
+  text-align: center;
+}
+
 .bigboxjourney-challenge-intro {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   font-size: 18px;
-  color: black;
+  color: white;
   margin: 0 auto;
   padding: 0 10px 0 10px;
+  position: absolute;
+  top: 35px;
 }
 
 .bigboxjourney-challenge-status {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
   margin-top: 10px;
-  flex-direction: column;
   text-align: center;
+  color: white;
 }
 
-.journey-challenge-status2 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #28A745;
-}
-
-.journey-challenge-status2-sub {
-  color: #28A745;
-}
-
-.journey-challenge-status1 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.journey-challenge-status1-sub {
-  color: #000000;
-  padding: 0 10px 0 10px;
-}
-
-.journey-challenge-status0 {
-  font-size: 18px;
-  font-weight: bold;
-  color: #dc3545;
-}
-
-.journey-challenge-status0-sub {
-  color: #dc3545;
+.btn-status {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding: 0.375rem 1.25rem;
+  border-radius: 5px;
 }
 

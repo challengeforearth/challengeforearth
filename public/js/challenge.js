@@ -114,7 +114,7 @@ slider.addEventListener("click", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fdoyen/Documents/dev/challenge-for-earth/Modules/Challenge/Resources/assets/js/challenge.js */"./Resources/assets/js/challenge.js");
+module.exports = __webpack_require__(/*! /home/fdoyen/Documents/dev/challengeforearth/Modules/Challenge/Resources/assets/js/challenge.js */"./Resources/assets/js/challenge.js");
 
 
 /***/ })

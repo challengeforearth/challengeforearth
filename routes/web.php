@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\GamificationController;
+use App\Http\Controllers\JourneyController;
+use App\Http\Controllers\ChallengeController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +31,29 @@ Route::get('email/validate/{token}', [RegisteredUserController::class, 'validate
     ->middleware('guest');
 
 require __DIR__.'/auth.php';
+
+Route::get('/bci', [BCIController::class, 'index']);
+Route::prefix('/dashboard')->middleware(['auth'])->group(function() {
+    Route::get('/', [GamificationController::class, 'index'])->name("dashboard.home");
+    Route::get('/profile', [GamificationController::class, 'profile'])->name("dashboard.profile");
+    Route::get('/nosgestesclimats', [GamificationController::class, 'nosgestesclimats'])->name("dashboard.nosgestesclimats");
+});
+
+
+Route::prefix('challenge')->middleware(['auth'])->group(function() {
+    Route::get('/', [ChallengeController::class, 'index'])->name("challenge.all");
+    Route::get('/show/{id}', [ChallengeController::class, 'show'])->name("challenge.show");
+    Route::get('/{category}', [ChallengeController::class, 'filterChallenges'])->name("challenge.category");
+});
+
+Route::prefix('journey')->middleware(['auth'])->group(function () {
+    Route::get('/launch/{id}', [JourneyController::class, 'launchjourney'])->name("journey.launch");
+    Route::get('/show/{id}', [JourneyController::class, 'show'])->name("journey.show");
+    Route::get('/{level}', [JourneyController::class, 'filterDifficulty'])->name("journey.level");
+    Route::get('/', [JourneyController::class, 'index'])->name("journey.all");
+});
+
+Route::prefix('api')->middleware(['auth'])->group(function () {
+    Route::get('/challenge/update/{id}', [ChallengeController::class, 'update']);
+    Route::post('/dashboard/feedback', [DashboardController::class, 'create']);
+});
