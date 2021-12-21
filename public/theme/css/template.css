@@ -2053,7 +2053,8 @@ input {
       widows: 3;
   }
 }
-/*! CSS Used from: https://preview.colorlib.com/theme/bootstrap/modal-20/css/style.css */
+
+
 p {
   color: #b3b3b3;
   font-weight: 300;
@@ -2201,6 +2202,37 @@ a:hover {
 
 .partners-logo {
   width: 70%;
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  background-color: #29cbe4!important;
+  font-weight: bold;
+  z-index: 10000;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px 50px;
+}
+
+.cookie-consent button {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+.cookie-consent button:hover {
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
 }
 
 @media screen and (max-width: 991px){

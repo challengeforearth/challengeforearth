@@ -41,6 +41,21 @@ class AuthenticatedSessionController extends Controller
         return view('auth.sources');
     }
 
+    public function mentions()
+    {
+        return view('auth.mentions');
+    }
+
+    public function conditions()
+    {
+        return view('auth.conditions');
+    }
+
+    public function politique()
+    {
+        return view('auth.politique');
+    }
+
     /**
      * Display the login view.
      *

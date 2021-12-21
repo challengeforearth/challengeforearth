@@ -24,6 +24,19 @@ Route::get('/', [AuthenticatedSessionController::class, 'index'])
 Route::get('/sources', [AuthenticatedSessionController::class, 'sources'])
                 ->middleware('guest')
                 ->name('sources');
+
+Route::get('/mentionslegales', [AuthenticatedSessionController::class, 'mentions'])
+                ->middleware('guest')
+                ->name('mentionslegales');
+
+
+Route::get('/conditionsgenerales', [AuthenticatedSessionController::class, 'conditions'])
+                ->middleware('guest')
+                ->name('conditionsgenerales');
+
+Route::get('/politiqueconfidentialite', [AuthenticatedSessionController::class, 'politique'])
+                ->middleware('guest')
+                ->name('politiqueconfidentialite');
                 
 Route::get('/connect', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
