@@ -16,11 +16,20 @@
             </div>
         </div>
     </div>
-
-    <section class="section home-feature">
+    <section class="section home-feature mt-1">
         <div class="container">
             <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <p class="description-black text-center">Niveau {{$user->level}}</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: {{$user->xp}}%" aria-valuenow="{{$user->xp}}" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="description-black text-center">Expérience {{$user->xp}}/100</p>
+                </div>
+                <div class="col-lg-4"></div>
                 <div class="col-lg-12">
+                    <h3 class="text-center my-5">Défis en cours</h3>
                     <div class="row">
                         @if(count($challengesWIP) === 0)
                         <div class="pusher"></div>
@@ -95,4 +104,51 @@
             </div>
         </div>
     </section>
+
+    <section class="section rgpd">
+        <h3 class="text-center mb-3">Vos données personnelles</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <button type="button" class="btn btn-full-green" data-toggle="modal" data-target="#RGPDdownloadModal">
+                            Télécharger mes données
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="RGPDdownloadModal" tabindex="-1" role="dialog" aria-labelledby="RGPDdownloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-3">
+                <h5 class="modal-title" id="RGPDdownloadModalLabel">Règlementation RGPD</h5>
+                <section class="section text-center">
+                    <form action="/dashboard/rgpd/download" method="post">
+                        @csrf
+                        <p class="description-black">Veuillez confirmer votre mot de passe</p>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-asterisk"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-full-green">Télécharger</button>
+                    </form>
+                </section>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-green" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

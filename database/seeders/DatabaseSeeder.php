@@ -304,8 +304,8 @@ class DatabaseSeeder extends Seeder
         JourneyChallenge::create([
             'journeychallengeid' => (string) Str::uuid(),
             'journeyid'=> $journey2->journeyid,
-            'challengeid' => $challenge3->challengeid,
-            'childchallenge' => $challenge7->challengeid,
+            'challengeid' => $challenge7->challengeid,
+            'childchallenge' => $challenge8->challengeid,
         ]);
         JourneyChallenge::create([
             'journeychallengeid' => (string) Str::uuid(),
@@ -458,7 +458,7 @@ class DatabaseSeeder extends Seeder
             'imagename' => 'badge_vg.png'
         ]);
 
-        $badgetrash = Badge::create([
+        $badgeweb = Badge::create([
             'badgeid' => (string) Str::uuid(),
             'name' => 'As des internets',
             'description' => 'Finir le parcours "Sobriété numérique"',
@@ -474,21 +474,21 @@ class DatabaseSeeder extends Seeder
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
-            'challengeid' => $challenge1->challengeid,
+            'challengeid' => $challenge8->challengeid,
             'key' => 'badge',
             'value' => $badgevg->badgeid
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
-            'challengeid' => $challenge2->challengeid,
+            'challengeid' => $challenge14->challengeid,
             'key' => 'badge',
-            'value' => $badgetrash->badgeid
+            'value' => $badgeweb->badgeid
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
-            'challengeid' => $challenge3->challengeid,
+            'challengeid' => $challenge4->challengeid,
             'key' => 'badge',
             'value' => $badgewakeup->badgeid
         ]);

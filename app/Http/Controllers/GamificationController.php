@@ -69,8 +69,13 @@ class GamificationController extends Controller
                                                 ->where('userid', $user->userid)
                                                 ->get();
         $kgeqCO2 = 0;
+        $xp = 0;
         $badges = Badge::all();
         foreach($challengesSuccessAuthUser as $challengeSuccessAuthUser){
+            $challenge = Challenge::find($challengeSuccessAuthUser->challengeid);
+            if($challenge){
+                $xp = $xp + $challenge->expawarded;
+            }
             $stats = Metachallenge::where('challengeid', $challengeSuccessAuthUser->challengeid)
                                 ->get();
             foreach($stats as $stat){
@@ -97,6 +102,10 @@ class GamificationController extends Controller
             }
         }
         $user = User::find($user->userid);
+        $currentlevel = (int) floor($xp / 100) + 1;
+        $currentxp = $xp % 100;
+        $user->xp = $currentxp;
+        $user->level = $currentlevel;
         return view('profile')
         ->with('kgeqCO2', $kgeqCO2)
         ->with('nbChallenges', $nbChallenges)

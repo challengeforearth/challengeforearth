@@ -1,63 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
+@extends('layouts.signedout')
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
-
-    <title>Challenge For Earth</title>
-
-    <!-- Additional CSS Files -->
-    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="{{ asset('theme/css/template.css') }}">
-
-    </head>
-    
-    <body class="home">
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
-
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo">
-                            <img src="{{ asset('images/logo.png') }}" width="50" alt="Challenge for earth"/>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="/" class="active">Accueil</a></li>
-                            <li><a href="/sources">Sources</a></li>
-                            <li><a href="https://blog.floriandoyen.fr">Blog</a></li>
-                            <li><a href="/connect">Se connecter</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+@section('content')
 
 
     <main id="yield">
@@ -113,50 +56,4 @@
             </div>
         </section>
     </main>
-
-    <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <ul class="social">
-                        <li><a href="https://www.linkedin.com/company/challengeforearth"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        <li><a href="https://www.instagram.com/challenge_for_earth"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="https://www.facebook.com/challengeforearth/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright">Copyright &copy; 2022 Challenge For Earth</p>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <a class="text-white" href="{{ route('mentionslegales') }}">Mentions légales</a>
-                    <span class="text-white">&nbsp;-&nbsp;</span>
-                    <a class="text-white" href="{{ route('conditionsgenerales') }}">Conditions générales</a>
-                    <span class="text-white">&nbsp;-&nbsp;</span>
-                    <a class="text-white" href="{{ route('politiqueconfidentialite') }}">Politique de confidentialité</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="{{ asset('theme/js/jquery-2.1.0.min.js') }}"></script>
-
-    <!-- Bootstrap -->
-    <script src="{{ asset('theme/js/popper.js') }}"></script>
-    <script src="{{ asset('theme/js/bootstrap.min.js') }}"></script>
-
-    <!-- Plugins -->
-    <script src="{{ asset('theme/js/scrollreveal.min.js') }}"></script>
-    <script src="{{ asset('theme/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('theme/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('theme/js/imgfix.min.js') }}"></script> 
-
-    <!-- Global Init -->
-    <script src="{{ asset('theme/js/custom.js') }}"></script>
-    <script src="{{ asset('theme/js/api.js') }}"></script>
-
-    </body>
-    </html>
+@endsection

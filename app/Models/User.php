@@ -8,10 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Modules\SocialHub\Entities\Post;
 use App\Models\Profile;
+use Soved\Laravel\Gdpr\Portable;
+use Soved\Laravel\Gdpr\Contracts\Portable as PortableContract;
 
-class User extends Authenticatable
+class User extends Authenticatable implements PortableContract
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Portable, Notifiable;
 
     protected $primaryKey = 'userid';
 
@@ -56,5 +58,19 @@ class User extends Authenticatable
     public function profile()
     {
         return $this->hasOne(Profile::class, 'userid');
+    }
+
+    /**
+     * Get the GDPR compliant data portability array for the model.
+     *
+     * @return array
+     */
+    public function toPortableArray()
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
     }
 }

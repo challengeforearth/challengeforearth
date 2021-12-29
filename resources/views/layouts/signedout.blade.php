@@ -19,7 +19,7 @@
 
     </head>
     
-    <body>
+    <body class="home">
     
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
@@ -38,23 +38,16 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="{{ route('dashboard.home') }}" class="logo">
+                        <a href="/" class="logo">
                             <img src="{{ asset('images/logo.png') }}" width="50" alt="Challenge for earth"/>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{{ route('dashboard.home') }}" class="active">Tableau de bord</a></li>
-                            <li><a href="{{ route('dashboard.nosgestesclimats') }}">Nos gestes climats</a></li>
-                            <li><a href="{{ route('journey.all') }}">Parcours</a></li>
-                            <li><a href="{{ route('dashboard.profile') }}">Profil</a></li>
+                            <li><a href="/" class="active">Accueil</a></li>
+                            <li><a href="/sources">Sources</a></li>
                             <li><a href="https://blog.challengeforearth.com">Blog</a></li>
-                            <li>
-                            <form class="js-validation-signin" method="POST" action="{{ route('logout') }}" novalidate="novalidate">
-                                @csrf
-                                <button id="btn-logout" type="submit">Se déconnecter</button>
-                            </form>
-                            </li>
+                            <li><a href="/connect">Se connecter</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -106,7 +99,7 @@
             </div>
         </div>
     </div>
-    <!-- ***** Footer Start ***** -->
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -122,10 +115,17 @@
                 <div class="col-lg-12">
                     <p class="copyright">Copyright &copy; 2022 Challenge For Earth</p>
                 </div>
+                <div class="col-lg-12 text-center">
+                    <a class="text-white" href="{{ route('mentionslegales') }}">Mentions légales</a>
+                    <span class="text-white">&nbsp;-&nbsp;</span>
+                    <a class="text-white" href="{{ route('conditionsgenerales') }}">Conditions générales</a>
+                    <span class="text-white">&nbsp;-&nbsp;</span>
+                    <a class="text-white" href="{{ route('politiqueconfidentialite') }}">Politique de confidentialité</a>
+                </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- jQuery -->
     <script src="{{ asset('theme/js/jquery-2.1.0.min.js') }}"></script>
 
@@ -138,10 +138,10 @@
     <script src="{{ asset('theme/js/waypoints.min.js') }}"></script>
     <script src="{{ asset('theme/js/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('theme/js/imgfix.min.js') }}"></script> 
-    
+
     <!-- Global Init -->
     <script src="{{ asset('theme/js/custom.js') }}"></script>
     <script src="{{ asset('theme/js/api.js') }}"></script>
 
-  </body>
-</html>
+    </body>
+    </html>

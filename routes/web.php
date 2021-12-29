@@ -5,6 +5,7 @@ use App\Http\Controllers\GamificationController;
 use App\Http\Controllers\JourneyController;
 use App\Http\Controllers\ChallengeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RgpdController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,9 +33,9 @@ Route::get('email/validate/{token}', [RegisteredUserController::class, 'validate
 
 require __DIR__.'/auth.php';
 
-Route::get('/bci', [BCIController::class, 'index']);
 Route::prefix('/dashboard')->middleware(['auth'])->group(function() {
     Route::get('/', [GamificationController::class, 'index'])->name("dashboard.home");
+    Route::post('/rgpd/download', [RgpdController::class, 'rgpddownload'])->name("dashboard.rgpddownload");
     Route::get('/profile', [GamificationController::class, 'profile'])->name("dashboard.profile");
     Route::get('/nosgestesclimats', [GamificationController::class, 'nosgestesclimats'])->name("dashboard.nosgestesclimats");
 });
@@ -55,5 +56,8 @@ Route::prefix('journey')->middleware(['auth'])->group(function () {
 
 Route::prefix('api')->middleware(['auth'])->group(function () {
     Route::get('/challenge/update/{id}', [ChallengeController::class, 'update']);
+});
+
+Route::prefix('api')->middleware([])->group(function () {
     Route::post('/dashboard/feedback', [DashboardController::class, 'create']);
 });
