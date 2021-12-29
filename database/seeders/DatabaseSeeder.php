@@ -28,7 +28,57 @@ class DatabaseSeeder extends Seeder
             'firstname' => 'Admin',
             'lastname' => 'User',
             'email' => 'admin@challengeforearth.com',
-            'password' => Hash::make('azerty'),
+            'password' => Hash::make('totofaitduvelo'),
+            'email_verified_at' => '2021-04-27 16:19:17',
+        ]);
+
+        $test1 = User::create([
+            'userid' => (string) Str::uuid(),
+            'username' => 'test1',
+            'firstname' => 'test1',
+            'lastname' => 'Utilisateur',
+            'email' => 'test1@challengeforearth.com',
+            'password' => Hash::make('test1'),
+            'email_verified_at' => '2021-04-27 16:19:17',
+        ]);
+
+        $test2 = User::create([
+            'userid' => (string) Str::uuid(),
+            'username' => 'test2',
+            'firstname' => 'test2',
+            'lastname' => 'Utilisateur',
+            'email' => 'test2@challengeforearth.com',
+            'password' => Hash::make('test2'),
+            'email_verified_at' => '2021-04-27 16:19:17',
+        ]);
+
+        $test3 = User::create([
+            'userid' => (string) Str::uuid(),
+            'username' => 'test3',
+            'firstname' => 'test3',
+            'lastname' => 'Utilisateur',
+            'email' => 'test3@challengeforearth.com',
+            'password' => Hash::make('test3'),
+            'email_verified_at' => '2021-04-27 16:19:17',
+        ]);
+
+        $test4 = User::create([
+            'userid' => (string) Str::uuid(),
+            'username' => 'test4',
+            'firstname' => 'test4',
+            'lastname' => 'Utilisateur',
+            'email' => 'test4@challengeforearth.com',
+            'password' => Hash::make('test4'),
+            'email_verified_at' => '2021-04-27 16:19:17',
+        ]);
+
+        $test5 = User::create([
+            'userid' => (string) Str::uuid(),
+            'username' => 'test5',
+            'firstname' => 'test5',
+            'lastname' => 'Utilisateur',
+            'email' => 'test5@challengeforearth.com',
+            'password' => Hash::make('test5'),
             'email_verified_at' => '2021-04-27 16:19:17',
         ]);
 
