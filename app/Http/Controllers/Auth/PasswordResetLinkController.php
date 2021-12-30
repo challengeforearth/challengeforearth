@@ -44,4 +44,33 @@ class PasswordResetLinkController extends Controller
                     : back()->withInput($request->only('email'))
                             ->withErrors(['email' => __($status)]);
     }
+
+    public function resetPasswordEmail(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|string|email|max:255|unique:users',
+        ]);
+
+        $bytes = random_bytes(5);
+        $token = bin2hex($bytes);
+        Token::create([
+            'tokenid' => (string) Str::uuid(),
+            'email' => $request->email,
+            'type' => 'registration',
+            'token' => $token,
+        ]);
+        $subject = 'Changement de mot de passe';
+        $template = 'emails.passwordreset';
+        Mail::to($request->email)
+            ->send(
+                new Contact(
+                    [
+                        'token' => $token
+                    ],
+                    $template,
+                    $subject
+                )
+            );
+        return redirect()->intended('/');
+    }
 }
