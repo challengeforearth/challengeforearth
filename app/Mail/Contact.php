@@ -52,6 +52,7 @@ class Contact extends Mailable
         return $this->from('hello@challengeforearth.com', 'Challenge For Earth')
                     ->subject($this->subject)
                     ->view($this->template)
+                    ->replyTo('hello@challengeforearth.com', 'Challenge For Earth')
                     ->with('data', $this->data);
     }
 }
