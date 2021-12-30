@@ -23,10 +23,26 @@
                                 <input type="hidden" name="token" value="{{ $request->route('token') }}">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <input id="password" class="form-control" type="password" name="password" required />
-                                        <input id="password_confirmation" class="form-control"
-                                        type="password"
-                                        name="password_confirmation" required />
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="@lang('login.placeholder.password')">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-asterisk"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmation mot de passe">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-asterisk"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
                                         <input type="email" class="form-control" id="email" name="email" placeholder="@lang('login.placeholder.email')" required />
                                         <div class="input-group-append">
                                             <span class="input-group-text">
@@ -37,7 +53,7 @@
                                 </div>
                                 <div class="form-group text-center">
                                     <button type="submit" class="btn btn-hero-primary">
-                                        <i class="fas fa-lock-open mr-1"></i> RÉCUPÉRER MOT DE PASSE
+                                        <i class="fas fa-lock-open mr-1"></i> CHANGER LE MOT DE PASSE
                                     </button>
                                 </div>
                             </form>
