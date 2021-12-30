@@ -48,7 +48,7 @@ class PasswordResetLinkController extends Controller
     public function resetPasswordEmail(Request $request)
     {
         $request->validate([
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255',
         ]);
 
         $bytes = random_bytes(5);
