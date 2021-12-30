@@ -12,6 +12,7 @@ use App\Models\Token;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\Contact;
 
 class NewPasswordController extends Controller
 {
