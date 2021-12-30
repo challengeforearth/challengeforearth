@@ -49,7 +49,7 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->from('noreply@challengeforearth.com')
+        return $this->from('hello@challengeforearth.com', 'Challenge For Earth')
                     ->subject($this->subject)
                     ->view($this->template)
                     ->with('data', $this->data);
