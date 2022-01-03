@@ -46,7 +46,6 @@
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                     <div class="left-heading">
                         <h2 class="section-title h2-challenge">Quelques conseils
-
                             <a href="{{$challenge->source}}" target="_blank">&nbsp;<i class="fas fa-info-circle "></i></a>
                         </h2>
                     </div>
