@@ -22,71 +22,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'admin',
-            'firstname' => 'Admin',
-            'lastname' => 'User',
-            'email' => 'admin@challengeforearth.com',
-            'password' => Hash::make('totofaitduvelo'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
-        $test1 = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'test1',
-            'firstname' => 'test1',
-            'lastname' => 'Utilisateur',
-            'email' => 'test1@challengeforearth.com',
-            'password' => Hash::make('test1'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
-        $test2 = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'test2',
-            'firstname' => 'test2',
-            'lastname' => 'Utilisateur',
-            'email' => 'test2@challengeforearth.com',
-            'password' => Hash::make('test2'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
-        $test3 = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'test3',
-            'firstname' => 'test3',
-            'lastname' => 'Utilisateur',
-            'email' => 'test3@challengeforearth.com',
-            'password' => Hash::make('test3'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
-        $test4 = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'test4',
-            'firstname' => 'test4',
-            'lastname' => 'Utilisateur',
-            'email' => 'test4@challengeforearth.com',
-            'password' => Hash::make('test4'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
-        $test5 = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'test5',
-            'firstname' => 'test5',
-            'lastname' => 'Utilisateur',
-            'email' => 'test5@challengeforearth.com',
-            'password' => Hash::make('test5'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
-        $profile = Profile::create([
-            'profileid' => (string) Str::uuid(),
-            'userid' => $user->userid,
-        ]);
-
         $challenge1 = Challenge::create([
             'challengeid' => (string) Str::uuid(),
             'title' => "Simuler son empreinte carbone",
@@ -498,6 +433,104 @@ class DatabaseSeeder extends Seeder
             'challengeid' => $challenge14->challengeid,
             'key' => 'kgeqCO2',
             'value' => '0'
+        ]);
+        
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge1->challengeid,
+            'key' => 'source',
+            'value' => 'https://datagir.ademe.fr/apps/nos-gestes-climat/'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge2->challengeid,
+            'key' => 'source',
+            'value' => 'https://bonpote.com/10-actions-simples-pour-devenir-ecolo/'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge3->challengeid,
+            'key' => 'source',
+            'value' => 'https://fresqueduclimat.org/projet/'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge4->challengeid,
+            'key' => 'source',
+            'value' => 'https://www.2tonnes.org/a-propos'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge5->challengeid,
+            'key' => 'source',
+            'value' => 'https://nosgestesclimat.fr/actions/plus/alimentation/r%C3%A9duire-viande/par-deux'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge6->challengeid,
+            'key' => 'source',
+            'value' => 'https://nosgestesclimat.fr/actions/plus/alimentation/r%C3%A9duire-viande/par-deux'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge7->challengeid,
+            'key' => 'source',
+            'value' => 'https://nosgestesclimat.fr/actions/plus/alimentation/r%C3%A9duire-viande/par-deux'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge8->challengeid,
+            'key' => 'source',
+            'value' => 'https://nosgestesclimat.fr/actions/plus/alimentation/r%C3%A9duire-viande/par-deux'
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge9->challengeid,
+            'key' => 'source',
+            'value' => ''
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge10->challengeid,
+            'key' => 'source',
+            'value' => ''
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge11->challengeid,
+            'key' => 'source',
+            'value' => ''
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge12->challengeid,
+            'key' => 'source',
+            'value' => ''
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge13->challengeid,
+            'key' => 'source',
+            'value' => ''
+        ]);
+
+        Metachallenge::create([
+            'metachallengeid' => (string) Str::uuid(),
+            'challengeid' => $challenge14->challengeid,
+            'key' => 'source',
+            'value' => ''
         ]);
         
 
