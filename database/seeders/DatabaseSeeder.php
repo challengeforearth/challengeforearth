@@ -22,16 +22,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user = User::create([
-            'userid' => (string) Str::uuid(),
-            'username' => 'admin',
-            'firstname' => 'Admin',
-            'lastname' => 'User',
-            'email' => 'admin@challengeforearth.com',
-            'password' => Hash::make('totofaitduvelo'),
-            'email_verified_at' => '2021-04-27 16:19:17',
-        ]);
-
         $challenge1 = Challenge::create([
             'challengeid' => (string) Str::uuid(),
             'title' => "Simuler son empreinte carbone",
