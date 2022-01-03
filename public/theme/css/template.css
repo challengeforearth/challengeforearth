@@ -1617,12 +1617,28 @@ preloader
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  height: 40 px;
+  height: 40px;
   line-height: 40px;
   border: transparent;
   letter-spacing: 1px;
   background-color: transparent;
   color: #1e1e1e;
+}
+
+.h2-challenge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h2-challenge i {
+  color: #6AB04C!important;
+}
+
+.h2-challenge i:hover {
+  background-color: #6AB04C!important;
+  color: white!important;
+  border-radius: 50%;
 }
 
 .btn-full-green {
@@ -2189,6 +2205,10 @@ a:hover {
 
 .badge-description {
   text-align: center;
+  color:rgba(0, 0, 0, 0.8);
+}
+
+.description-black p {
   color:rgba(0, 0, 0, 0.8);
 }
 

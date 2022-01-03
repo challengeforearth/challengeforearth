@@ -44,7 +44,7 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="{{ route('dashboard.home') }}" class="active">Tableau de bord</a></li>
+                            <li><a href="{{ route('dashboard.home') }}">Tableau de bord</a></li>
                             <li><a href="{{ route('dashboard.nosgestesclimats') }}">Nos gestes climats</a></li>
                             <li><a href="{{ route('journey.all') }}">Parcours</a></li>
                             <li><a href="{{ route('dashboard.profile') }}">Profil</a></li>

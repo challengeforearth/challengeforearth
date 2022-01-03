@@ -22,7 +22,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <img src="{{ asset('images/partenaires/ademe.jpg') }}" class="partners-logo" alt="Logo ADEME" />
+                    <a href="https://www.ademe.fr/" target="_blank"><img src="{{ asset('images/partenaires/ademe.jpg') }}" class="partners-logo" alt="Logo ADEME" /></a>
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-lg-1"></div>
                     <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                        <img src="{{ asset('images/partenaires/abc.svg') }}" class="partners-logo" alt="Logo ABC" />
+                        <a href="https://www.associationbilancarbone.fr/" target="_blank"><img src="{{ asset('images/partenaires/abc.svg') }}" class="partners-logo" alt="Logo ABC" /></a>
                     </div>
                 </div>
             </div>

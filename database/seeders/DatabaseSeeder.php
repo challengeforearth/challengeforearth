@@ -22,13 +22,23 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $user = User::create([
+            'userid' => (string) Str::uuid(),
+            'username' => 'admin',
+            'firstname' => 'Admin',
+            'lastname' => 'User',
+            'email' => 'admin@challengeforearth.com',
+            'password' => Hash::make('totofaitduvelo'),
+            'email_verified_at' => '2021-04-27 16:19:17',
+        ]);
+
         $challenge1 = Challenge::create([
             'challengeid' => (string) Str::uuid(),
             'title' => "Simuler son empreinte carbone",
             'order' => 1,
             'category' => "Sensibilisation",
             'description' => "<p>Parce-que la premi&egrave;re chose &agrave; faire et de savoir o&ugrave; on en est, rien de tel que de simuler son empreinte carbone avec un simulateur,&nbsp;comme <a title='Simulateur Nos Gestes Climats' href='http://nosgestesclimat.fr/' target='_blank'>Nos Gestes Climats</a> cr&eacute;&eacute; par l'<a title='L' Agence de l'environnement et de la ma&icirc;trise de l'&eacute;nergie' href='https://www.ademe.fr/' target='_blank' rel='noopener'>ADEME</a> et l'<a title='Association Bilan Carbone' href='https://www.associationbilancarbone.fr/' target='_blank'>Association Bilan Carbone</a>.</p>",
-            'howto' => "<p>Pour se faire, rien de plus simple : Rendez-vous sur <a title='Simulateur Nos Gestes Climats' href='http://nosgestesclimat.fr/' target='_blank' rel='noopener'>Nos Gestes Climats</a>, faire la simulation en vous laissant guider par l'application web... C'est rapide, &ccedil;a dure environ 10 minutes et c'est un premier levier pour prendre conscience de son impact sur l'environnement ! En bonus, vous aurez acc&egrave;s &agrave; plusieurs actions pour r&eacute;duire votre empreinte.</p>",
+            'howto' => "<p>Pour ce faire, rien de plus simple : Rendez-vous sur <a title='Simulateur Nos Gestes Climats' href='http://nosgestesclimat.fr/' target='_blank' rel='noopener'>Nos Gestes Climats</a>, faire la simulation en vous laissant guider par l'application web... C'est rapide, &ccedil;a dure environ 10 minutes et c'est un premier levier pour prendre conscience de son impact sur l'environnement ! En bonus, vous aurez acc&egrave;s &agrave; plusieurs actions pour r&eacute;duire votre empreinte.</p>",
             'level' => "Débutant",
             'expawarded' => 20,
             'icon' => 'fa-solid fa-gauge-simple',
@@ -40,7 +50,7 @@ class DatabaseSeeder extends Seeder
             'order' => 2,
             'category' => "Sensibilisation",
             'description' => "<p>Ce d&eacute;fi est important puisqu'il sera la pierre angulaire de vos connaissances. Les sources d'information que vous suivez aiguilleront inexorablement votre pens&eacute;e, c'est pourquoi avoir des sources s&ucirc;res sur le sujet semble important.</p>",
-            'howto' => "\"<p>Pour se faire, voici une liste non-exhaustive de sources estim&eacute;es <span style=\"\"text-decoration: underline;\"\"><strong>s&ucirc;res</strong></span> :</p>
+            'howto' => "\"<p>Pour ce faire, voici une liste non-exhaustive de sources estim&eacute;es <span style=\"\"text-decoration: underline;\"\"><strong>s&ucirc;res</strong></span> :</p>
             <ul>
             <li><a title=\"\"L'Agence de l'environnement et de la ma&icirc;trise de l'&eacute;nergie\"\" href=\"\"https://www.ademe.fr/\"\" target=\"\"_blank\"\">L'Agence de l'environnement et de la ma&icirc;trise de l'&eacute;nergie (ADEME)</a></li>
             <li><a title=\"\"Bon Pote\"\" href=\"\"https://bonpote.com/\"\" target=\"\"_blank\"\">Bon Pote</a> de <a title=\"\"Thomas Wagner LinkedIn\"\" href=\"\"https://www.linkedin.com/in/thomas-wagner-0807b932/\"\" target=\"\"_blank\"\">Thomas Wagner (Page LinkedIn)</a> qui traite d'&eacute;cologie, d'&eacute;conomie, de justice sociale...</li>
@@ -48,7 +58,7 @@ class DatabaseSeeder extends Seeder
             <li><a title=\"\"Pour un r&eacute;veil &eacute;cologique\"\" href=\"\"https://pour-un-reveil-ecologique.org/fr/\"\" target=\"\"_blank\"\">Pour un r&eacute;veil &eacute;cologique</a>, le collectif d'&eacute;tudiants qui vulgarise divers sujets &eacute;cologiques</li>
             <li><a title=\"\"Cyril Dion Instagram\"\" href=\"\"https://www.instagram.com/cyril_dion/\"\" target=\"\"_blank\"\">Cyril Dion (Instagram)</a>, auteur, r&eacute;alisateur et <strong><em>green activist</em></strong></li>
             </ul>
-            <p>Des sources, <a title=\"\"Les comptes Instagram &agrave; suivre sur l'environnement\"\" href=\"\"https://bonpote.com/les-comptes-instagram-a-suivre-sur-le-climat-et-lenvironnement/\"\" target=\"\"_blank\"\">il y en a des dizaines de viable</a>, mais avec cette petite liste, vous partez d&eacute;j&agrave; gagnants !</p>\"",
+            <p>Des sources, <a title=\"\"Les comptes Instagram &agrave; suivre sur l'environnement\"\" href=\"\"https://bonpote.com/les-comptes-instagram-a-suivre-sur-le-climat-et-lenvironnement/\"\" target=\"\"_blank\"\">il y en a des dizaines de viables</a>, mais avec cette petite liste, vous partez d&eacute;j&agrave; gagnants !</p>\"",
             'level' => "Débutant",
             'expawarded' => 10,
             'icon' => 'fa-solid fa-globe',
@@ -60,7 +70,7 @@ class DatabaseSeeder extends Seeder
             'order' => 3,
             'category' => "Sensibilisation",
             'description' => "<p>Participer &agrave; un atelier collaboratif pour comprendre en 3 heures les enjeux climatiques sans &ecirc;tre climatologue ? C'est possible avec <a title=\"La Fresque du Climat\" href=\"https://fresqueduclimat.org/\" target=\"_blank\">La Fresque du Climat</a> !</p>",
-            'howto' => "\"<p>Pour se faire, il suffit de se rendre <a title=\"\"Page d'inscription &agrave; un atelier &quot;Fresque du Climat&quot;\"\" href=\"\"https://fresqueduclimat.org/inscription-atelier/\"\" target=\"\"_blank\"\">sur la page d'inscription</a> et de suivre les indications. Et pour les entreprises ? <a title=\"\"Inscription entreprise &agrave; un atelier &quot;Fresque du Climat&quot;\"\" href=\"\"https://fresqueduclimat.org/entreprises/\"\" target=\"\"_blank\"\">C'est par ici que &ccedil;a se passe</a>. Une fois l'atelier r&eacute;alis&eacute;, les enjeux climatiques n'auront plus de secret pour vous !</p>
+            'howto' => "\"<p>Pour ce faire, il suffit de se rendre <a title=\"\"Page d'inscription &agrave; un atelier &quot;Fresque du Climat&quot;\"\" href=\"\"https://fresqueduclimat.org/inscription-atelier/\"\" target=\"\"_blank\"\">sur la page d'inscription</a> et de suivre les indications. Et pour les entreprises ? <a title=\"\"Inscription entreprise &agrave; un atelier &quot;Fresque du Climat&quot;\"\" href=\"\"https://fresqueduclimat.org/entreprises/\"\" target=\"\"_blank\"\">C'est par ici que &ccedil;a se passe</a>. Une fois l'atelier r&eacute;alis&eacute;, les enjeux climatiques n'auront plus de secret pour vous !</p>
             <p>Des fresques, il y en a plein (num&eacute;rique, mobilit&eacute;, alimentation, oc&eacute;ane, biodiversit&eacute;...), libre &agrave; vous d'y participer, les fresques fonctionnent toutes sensiblement de la m&ecirc;me fa&ccedil;on.</p>\"",
             'level' => "Débutant",
             'expawarded' => 35,
@@ -73,7 +83,7 @@ class DatabaseSeeder extends Seeder
             'order' => 4,
             'category' => "Sensibilisation",
             'description' => "<p>Deux tonnes d'&eacute;quivalent CO2 par an et par personne, comment y arriver ? C'est &agrave; cette question qu'essaie de r&eacute;pondre l'atelier <a title=\"Site Web 2tonnes\" href=\"https://www.2tonnes.org/\" target=\"_blank\">2tonnes</a>. Et comme c'est un objectif primordial pour 2050, rien de tel qu'un atelier pour y r&eacute;fl&eacute;chir !</p>",
-            'howto' => "<p>Pour participer, il faut se rendre sur <a title=\"Page d'inscription de l'atelier 2tonnes\" href=\"https://www.2tonnes.org/citoyens\" target=\"_blank\">leur page d'inscription</a> et s'inscrire. C'est un atelier qui vive surtout les particuliers, mais les professionnels sont aussi accept&eacute;s &agrave; raison d'un repr&eacute;sentant par entreprise.</p>",
+            'howto' => "<p>Pour participer, il faut se rendre sur <a title=\"Page d'inscription de l'atelier 2tonnes\" href=\"https://www.2tonnes.org/citoyens\" target=\"_blank\">leur page d'inscription</a> et s'inscrire. C'est un atelier qui vise surtout les particuliers, mais les professionnels sont aussi accept&eacute;s &agrave; raison d'un repr&eacute;sentant par entreprise.</p>",
             'level' => "Débutant",
             'expawarded' => 35,
             'icon' => 'fa-solid fa-scale-unbalanced',
@@ -134,7 +144,7 @@ class DatabaseSeeder extends Seeder
             'order' => 3,
             'category' => "Alimentation",
             'description' => "<p>Programmer une semaine v&eacute;g&eacute;tarienne permet de vous plonger dans le quotidien de personnes ne mangeant pas de chair animale (viande, poisson, crustac&eacute;...)</p>",
-            'howto' => "<p>Pour se faire, vous pouvez reprendre certains conseils du d&eacute;fi 'Manger de la viande uniquement le midi', mais vous pouvez &eacute;galement pr&eacute;voir vos repas &agrave; l'avance en faisant un menu, afin de vous y tenir. Vous aurez plus de courage si vous savez d&eacute;j&agrave; ce que vous allez cuisiner le soir apr&egrave;s une longue journ&eacute;e. Vous pouvez &eacute;galement cuisiner les repas la veille ou l'avant-veille : la cuisine v&eacute;g&eacute;tale se garde tr&egrave;s bien au frigo !</p>",
+            'howto' => "<p>Pour ce faire, vous pouvez reprendre certains conseils du d&eacute;fi 'Manger de la viande uniquement le midi', mais vous pouvez &eacute;galement pr&eacute;voir vos repas &agrave; l'avance en faisant un menu, afin de vous y tenir. Vous aurez plus de courage si vous savez d&eacute;j&agrave; ce que vous allez cuisiner le soir apr&egrave;s une longue journ&eacute;e. Vous pouvez &eacute;galement cuisiner les repas la veille ou l'avant-veille : la cuisine v&eacute;g&eacute;tale se garde tr&egrave;s bien au frigo !</p>",
             'level' => "Intermédiaire",
             'expawarded' => 80,
             'from' => 'ABC / ADEME',
@@ -170,7 +180,7 @@ class DatabaseSeeder extends Seeder
             'title' => "Réduire mon temps de streaming",
             'order' => 1,
             'category' => "Numérique",
-            'description' => "<p>Le streaming vid&eacute;o contrinue aux &eacute;missions de GES (d'autant plus quand on utilise la connexion mobile) car il n&eacute;cessite en r&eacute;alit&eacute; une multitude d'infrastructures.</p>",
+            'description' => "<p>Le streaming vid&eacute;o contribue aux &eacute;missions de GES (d'autant plus quand on utilise la connexion mobile) car il n&eacute;cessite en r&eacute;alit&eacute; une multitude d'infrastructures.</p>",
             'howto' => "<p>En limitant sa consommation, ici d'une heure&nbsp; par jour quand on y passe plus de 2h, et privil&eacute;gier des alternatives comme la lecture permet de r&eacute;duire son empreinte carbone num&eacute;rique.</p>",
             'level' => "Débutant",
             'expawarded' => 20,
@@ -495,42 +505,42 @@ class DatabaseSeeder extends Seeder
             'metachallengeid' => (string) Str::uuid(),
             'challengeid' => $challenge9->challengeid,
             'key' => 'source',
-            'value' => ''
+            'value' => 'https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf?modal=false'
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
             'challengeid' => $challenge10->challengeid,
             'key' => 'source',
-            'value' => ''
+            'value' => 'https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf?modal=false'
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
             'challengeid' => $challenge11->challengeid,
             'key' => 'source',
-            'value' => ''
+            'value' => 'https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf?modal=false'
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
             'challengeid' => $challenge12->challengeid,
             'key' => 'source',
-            'value' => ''
+            'value' => 'https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf?modal=false'
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
             'challengeid' => $challenge13->challengeid,
             'key' => 'source',
-            'value' => ''
+            'value' => 'https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf?modal=false'
         ]);
 
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
             'challengeid' => $challenge14->challengeid,
             'key' => 'source',
-            'value' => ''
+            'value' => 'https://librairie.ademe.fr/cadic/2351/guide-pratique-face-cachee-numerique.pdf?modal=false'
         ]);
         
 

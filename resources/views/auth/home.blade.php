@@ -15,7 +15,7 @@
                             <a href="https://discord.gg/vU7jwSQW" class="btn-discord"><i class="fa-brands fa-discord"></i> VIENS ON EST SUR DISCORD</a>
                             <div class="mt-5">
                                 <p class="count-item">
-                                    <strong class="kgeqCO2nbr">{{$kgeqCO2all}}</strong><sub class="kgeqCO2nbr-sub">kgeqCO2</sub>
+                                    <strong class="kgeqCO2nbr">{{$kgeqCO2all}}</strong><sub class="kgeqCO2nbr-sub">kgeqCO2</sub><a href="https://fr.wikipedia.org/wiki/%C3%89quivalent_CO2" target="_blank">&nbsp;<i class="fas fa-info-circle text-white"></i></a>
                                     <br />évité grâce au <b>challengers</b> !
                                 </p>
                             </div>

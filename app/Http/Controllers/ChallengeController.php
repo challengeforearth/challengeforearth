@@ -65,6 +65,9 @@ class ChallengeController extends Controller
                 if($stat->key === 'kgeqCO2'){
                     $challenge->kgeqCO2 = $stat->value;
                 }
+                if($stat->key === 'source'){
+                    $challenge->source = $stat->value;
+                }
                 if($stat->key === 'badge'){
                     $badge = Badge::find($stat->value);
                     if($badge){

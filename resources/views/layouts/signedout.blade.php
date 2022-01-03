@@ -44,7 +44,7 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="/" class="active">Accueil</a></li>
+                            <li><a href="/">Accueil</a></li>
                             <li><a href="/sources">Sources</a></li>
                             <li><a href="https://blog.challengeforearth.com">Blog</a></li>
                             <li><a href="/connect">Se connecter</a></li>
