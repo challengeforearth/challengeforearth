@@ -2277,6 +2277,10 @@ a:hover {
   .features-small-item {
     width: 100%;
   }
+
+  .note-editor {
+    margin-top: 0px;
+  }
 }
 
 /* common */
@@ -2330,4 +2334,13 @@ a:hover {
   left: -25px;
   top: 30px;
   transform: rotate(45deg);
+}
+
+
+/* SUMMERNOTE */
+
+.note-editor {
+  margin-top: 200px;
+  background-color: white;
+  margin-bottom: 50px;
 }

@@ -15,8 +15,8 @@
     <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    @yield('css')
     <link rel="stylesheet" href="{{ asset('theme/css/template.css') }}">
-
     </head>
     
     <body>
@@ -48,6 +48,7 @@
                             <li><a href="{{ route('dashboard.nosgestesclimats') }}">Nos gestes climats</a></li>
                             <li><a href="{{ route('journey.all') }}">Parcours</a></li>
                             <li><a href="{{ route('dashboard.profile') }}">Profil</a></li>
+                            <li><a href="{{ route('dashboard.admin') }}">Gérer</a></li>
                             <li><a href="https://blog.challengeforearth.com">Blog</a></li>
                             <li>
                             <form class="js-validation-signin" method="POST" action="{{ route('logout') }}" novalidate="novalidate">
@@ -132,6 +133,8 @@
     <!-- Bootstrap -->
     <script src="{{ asset('theme/js/popper.js') }}"></script>
     <script src="{{ asset('theme/js/bootstrap.min.js') }}"></script>
+
+    @yield('js')
 
     <!-- Plugins -->
     <script src="{{ asset('theme/js/scrollreveal.min.js') }}"></script>

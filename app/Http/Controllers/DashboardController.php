@@ -21,4 +21,16 @@ class DashboardController extends Controller
         $feedback->save();
         return json_encode(['status' => 201, 'message' => 'Merci pour votre feedback ! :-)']);
     }
+
+    public function admin(){
+        return view('admin');
+    }
+
+    public function createChallenge(){
+        return view('createchallenge');
+    }
+
+    public function manageChallenge(){
+        return view('managechallenge');
+    }
 }
