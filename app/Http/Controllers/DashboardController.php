@@ -22,15 +22,15 @@ class DashboardController extends Controller
         return json_encode(['status' => 201, 'message' => 'Merci pour votre feedback ! :-)']);
     }
 
-    public function admin(){
-        return view('admin');
-    }
+    // public function admin(){
+    //     return view('admin');
+    // }
 
-    public function createChallenge(){
-        return view('createchallenge');
-    }
+    // public function createChallenge(){
+    //     return view('createchallenge');
+    // }
 
-    public function manageChallenge(){
-        return view('managechallenge');
-    }
+    // public function manageChallenge(){
+    //     return view('managechallenge');
+    // }
 }

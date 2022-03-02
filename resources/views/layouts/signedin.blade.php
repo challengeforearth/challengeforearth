@@ -48,7 +48,6 @@
                             <li><a href="{{ route('dashboard.nosgestesclimats') }}">Nos gestes climats</a></li>
                             <li><a href="{{ route('journey.all') }}">Parcours</a></li>
                             <li><a href="{{ route('dashboard.profile') }}">Profil</a></li>
-                            <li><a href="{{ route('dashboard.admin') }}">Gérer</a></li>
                             <li><a href="https://blog.challengeforearth.com">Blog</a></li>
                             <li>
                             <form class="js-validation-signin" method="POST" action="{{ route('logout') }}" novalidate="novalidate">
