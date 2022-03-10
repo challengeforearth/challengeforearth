@@ -41,6 +41,7 @@ Route::prefix('/dashboard')->middleware(['auth'])->group(function() {
     Route::get('/challenge/create', [DashboardController::class, 'createChallenge'])->name("dashboard.createchallenge");
     Route::get('/challenge/manage', [DashboardController::class, 'manageChallenge'])->name("dashboard.managechallenge");
     Route::get('/nosgestesclimats', [GamificationController::class, 'nosgestesclimats'])->name("dashboard.nosgestesclimats");
+    Route::get('/monconvertisseurco2', [GamificationController::class, 'monconvertisseurco2'])->name("dashboard.monconvertisseurco2");
 });
 
 

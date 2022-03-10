@@ -47,6 +47,10 @@ class GamificationController extends Controller
         return view('nosgestesclimats');
     }
 
+    public function monconvertisseurco2(){
+        return view('monconvertisseurco2');
+    }
+
     /**
      * Display a listing of the resource.
      * @return Renderable

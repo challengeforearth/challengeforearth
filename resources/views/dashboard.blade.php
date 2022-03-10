@@ -28,12 +28,22 @@
                                     <div class="icon">
                                         <i class="icons-challenge fas fa-list-alt"></i>
                                     </div>
-                                    <h5 class="features-title">Le simulateur</h5>
+                                    <h5 class="features-title">Votre bilan carbone</h5>
                                     <p>Simulez vos émissions de CO2 avec le simulateur de l'ADEME</p>
                                 </div>
                             </a>
                         </div>
-                        <div class="position-relative col-lg-4 col-md-6 col-sm-6 col-12"></div>
+                        <div class="position-relative col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <a href="/dashboard/monconvertisseurco2/">    
+                                <div class="features-small-item">
+                                    <div class="icon">
+                                        <i class="icons-challenge fas fa-list-alt"></i>
+                                    </div>
+                                    <h5 class="features-title">Mon comparateur CO2</h5>
+                                    <p>2 tonnes de CO2, ça représente quoi ? Voici quelques équivalents, histoire de se rendre compte.</p>
+                                </div>
+                            </a>
+                        </div>
                         <div class="position-relative col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <a href="/journey/">    
                                 <div class="features-small-item">
