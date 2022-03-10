@@ -47,7 +47,6 @@ class NewPasswordController extends Controller
         $error = "";
         $user = User::where('email', $request->email)->get()->first();
         $token = Token::where('email', $request->email)->orderBy('created_at', 'desc')->first();
-        dd($token);
         if($user && $token){
             if($token->token === $request->token){
                 $user->password = Hash::make($request->password);
