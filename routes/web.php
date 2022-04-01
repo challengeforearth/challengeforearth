@@ -38,8 +38,8 @@ Route::prefix('/dashboard')->middleware(['auth'])->group(function() {
     Route::post('/rgpd/download', [RgpdController::class, 'rgpddownload'])->name("dashboard.rgpddownload");
     Route::get('/profile', [GamificationController::class, 'profile'])->name("dashboard.profile");
     Route::get('/admin', [DashboardController::class, 'admin'])->name("dashboard.admin");
-    Route::get('/challenge/create', [DashboardController::class, 'createChallenge'])->name("dashboard.createchallenge");
-    Route::get('/challenge/manage', [DashboardController::class, 'manageChallenge'])->name("dashboard.managechallenge");
+    //Route::get('/challenge/create', [DashboardController::class, 'createChallenge'])->name("dashboard.createchallenge");
+    //Route::get('/challenge/manage', [DashboardController::class, 'manageChallenge'])->name("dashboard.managechallenge");
     Route::get('/nosgestesclimats', [GamificationController::class, 'nosgestesclimats'])->name("dashboard.nosgestesclimats");
     Route::get('/monconvertisseurco2', [GamificationController::class, 'monconvertisseurco2'])->name("dashboard.monconvertisseurco2");
 });

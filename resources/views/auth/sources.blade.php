@@ -57,6 +57,24 @@
                         <a href="https://www.associationbilancarbone.fr/" target="_blank"><img src="{{ asset('images/partenaires/abc.svg') }}" class="partners-logo" alt="Logo ABC" /></a>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <a href="https://surfrider.eu/" target="_blank"><img src="{{ asset('images/partenaires/surfrider.png') }}" class="partners-logo" alt="Logo SURFRIDER" /></a>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                        <div class="left-heading">
+                            <h2 class="section-title text-center">L'Association Surfrider</h2>
+                        </div>
+                        <div class="left-text text-justify">
+                            <p class="description-black">
+                            Surfrider Foundation Europe est une association à but non lucratif, chargée de la protection et de la mise en valeur des lacs, des rivières, de l’océan, des vagues et du littoral. Elle regroupe à ce jour plus de 18 000 adhérents et intervient sur 12 pays via ses antennes bénévoles.
+                            <p class="description-black">
+                            Surfrider Foundation Europe intervient sur 3 domaines spécifiques sur lesquels l’organisation a acquis une expertise reconnue depuis plus de 30 ans : les déchets aquatiques, la qualité de l’eau et la santé des usages, l’aménagement du littoral et le changement climatique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
