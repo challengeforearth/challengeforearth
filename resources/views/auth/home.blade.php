@@ -111,7 +111,7 @@
                                 Challenge For Earth propose des parcours de défis variés, pour les adultes comme pour les enfants
                             </p>
                             <p class="description-black">
-                                Des parcours adapté et simplifié pour les enfants, des parcours plus complets pour les adultes. dans
+                                Des parcours adaptés et simplifiés pour les enfants, des parcours plus complets pour les adultes. Dans
                                 les deux cas, l'objectif est de sensibiliser aux différents enjeux environnementaux par des actions
                                 concrètes !
                             </p>
