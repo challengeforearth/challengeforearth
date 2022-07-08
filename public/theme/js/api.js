@@ -7,7 +7,7 @@ $( document ).ready(function() {
     challengeaccepted.click(function(){
         $.ajax({
             type: "GET",
-            url: "/api/challenge/update/"+challengeid.text(),
+            url: "/internalapi/challenge/update/"+challengeid.text(),
             success: function (dataCheck) {
                 icon.removeClass();
                 icon.addClass(dataCheck.code);
@@ -28,7 +28,7 @@ $( document ).ready(function() {
     ideaBtnSend.click(function(){
         $.ajax({
             type: "POST",
-            url: "/api/dashboard/feedback",
+            url: "/internalapi/dashboard/feedback",
             data: {message: $("#ideaMessage").val(), _token: $("#csrf-token").attr('value')},
             success: function (dataCheck) {
                 let result = JSON.parse(dataCheck);

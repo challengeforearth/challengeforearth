@@ -6,6 +6,7 @@ use App\Http\Controllers\JourneyController;
 use App\Http\Controllers\ChallengeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RgpdController;
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,10 +59,18 @@ Route::prefix('journey')->middleware(['auth'])->group(function () {
     Route::get('/', [JourneyController::class, 'index'])->name("journey.all");
 });
 
-Route::prefix('api')->middleware(['auth'])->group(function () {
+Route::prefix('internalapi')->middleware(['auth'])->group(function () {
     Route::get('/challenge/update/{id}', [ChallengeController::class, 'update']);
 });
 
-Route::prefix('api')->middleware([])->group(function () {
+Route::prefix('internalapi')->middleware([])->group(function () {
     Route::post('/dashboard/feedback', [DashboardController::class, 'create']);
+});
+
+Route::prefix('api')->group(function() {
+    Route::post('/login', [ApiController::class, 'login']); // Get the token
+    Route::get('/challenge/all', [ApiController::class, 'getAllChallenges']); // Get all the challenges
+    Route::get('/journey/all', [ApiController::class, 'getAllJourneys']); // Get all the journey
+    Route::get('/challenge/{uuid}', [ApiController::class, 'getChallenge']); // Get a challenge
+    Route::get('/journey/{uuid}', [ApiController::class, 'getJourney']); // Get a journey
 });
