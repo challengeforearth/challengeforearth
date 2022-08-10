@@ -548,21 +548,21 @@ class DatabaseSeeder extends Seeder
             'badgeid' => (string) Str::uuid(),
             'name' => 'Veggie',
             'description' => 'Finir le parcours "Devenir végétarien"',
-            'imagename' => 'badge_vg.png'
+            'imagename' => 'fa-solid fa-carrot'
         ]);
 
         $badgeweb = Badge::create([
             'badgeid' => (string) Str::uuid(),
             'name' => 'As des internets',
             'description' => 'Finir le parcours "Sobriété numérique"',
-            'imagename' => 'badge_internet.png'
+            'imagename' => 'fa-solid fa-laptop'
         ]);
 
         $badgewakeup = Badge::create([
             'badgeid' => (string) Str::uuid(),
             'name' => 'Éveillé·e',
             'description' => 'Finir le parcours "Éveil des consciences"',
-            'imagename' => 'badge_wakeup.png'
+            'imagename' => 'fa-solid fa-brain'
         ]);
 
         Metachallenge::create([
@@ -586,4 +586,5 @@ class DatabaseSeeder extends Seeder
             'value' => $badgewakeup->badgeid
         ]);
     }
+
 }

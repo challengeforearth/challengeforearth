@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 use App\Models\User;
 use App\Models\UserChallenge;
 use App\Models\Metachallenge;
+use App\Models\ApiToken;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -78,7 +80,22 @@ class AuthenticatedSessionController extends Controller
         }else{
             if (Auth::attempt($credentials)) {
                 $request->session()->regenerate();
-    
+                $refresh_time = 3600;
+                $revoked_time = $refresh_time*48;
+                $timestamp = time();
+                $token = md5(rand(1, 10) . $timestamp);
+                $expiration = $timestamp+$refresh_time;
+                $apiToken = new ApiToken;
+                $tokenId = (string) Str::uuid();
+                $apiToken->TokenId = $tokenId;
+                $apiToken->Email = $credentials['username'];
+                $apiToken->Token = $token;
+                $apiToken->Timestamp = $timestamp;
+                $apiToken->Expiration = $expiration;
+                $apiToken->Scope = "write";
+                $apiToken->State = "Valid";
+                $apiToken->save();
+
                 return redirect()->intended('/dashboard');
             }
         }

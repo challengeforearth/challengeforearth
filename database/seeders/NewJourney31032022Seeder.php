@@ -148,7 +148,7 @@ class NewJourney31032022Seeder extends Seeder
             'badgeid' => (string) Str::uuid(),
             'name' => 'Do It Yourself ! (DIY)',
             'description' => 'Finir le parcours "Fait maison"',
-            'imagename' => 'badge_trash.png'
+            'imagename' => 'fa-solid fa-hammer'
         ]);
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),

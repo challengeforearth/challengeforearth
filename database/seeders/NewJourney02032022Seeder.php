@@ -212,7 +212,7 @@ class NewJourney02032022Seeder extends Seeder
             'badgeid' => (string) Str::uuid(),
             'name' => 'Débutant zéro déchet',
             'description' => 'Finir le parcours "Pro des déchets"',
-            'imagename' => 'badge_trash.png'
+            'imagename' => 'fa-solid fa-trash'
         ]);
         Metachallenge::create([
             'metachallengeid' => (string) Str::uuid(),
