@@ -12,7 +12,7 @@
                             <h1>Rejoins la communauté de Challenge For Earth</h1>
                             <p class="challenge-metanumber-container">Deviens un <strong>challenger</strong></p>
                             <p class="mb-3">et réalise des parcours de défis variés</p>
-                            <a href="{{ route('auth.register')}}" class="btn-discord"><i class="fa-solid fa-user-plus"></i> INSCRIS TOI</a>
+                            <a href="{{ route('auth.register')}}" class="btn-discord"><i class="fa-solid fa-user-plus"></i> INSCRIS-TOI</a>
                             <p class="mt-5 mb-3">Tu peux aussi rejoindre toute la communauté</p>
                             <a href="https://discord.gg/DfkbXgQYpa" class="btn-discord"><i class="fa-brands fa-discord"></i> ON EST SUR DISCORD</a>
                             <div class="mt-5">
