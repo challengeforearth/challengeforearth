@@ -46,7 +46,7 @@
                         <ul class="nav">
                             <li><a href="/">Accueil</a></li>
                             <li><a href="/sources">Sources</a></li>
-                            <li><a href="https://blog.challengeforearth.com">Blog</a></li>
+                            <li><a href="https://floriandoyen.fr">Blog</a></li>
                             <li><a href="/connect"><strong>Mon espace</strong></a></li>
                         </ul>
                         <a class='menu-trigger'>
